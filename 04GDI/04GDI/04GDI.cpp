@@ -202,10 +202,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			POINT lpPoint[6];
 			for (size_t i = 0; i < sizeof(lpPoint); i++)
 			{
-				lpPoint[i].x = cxClient/4 * cos(i * PI / 3 + PI / 6) + cxClient * 3 / 4;
-				lpPoint[i].y = cyClient/4 * sin(i * PI / 3 + PI / 6) + cyClient * 3 / 4;
+				lpPoint[i].x = cxClient/4.0 * cos(i * PI / 3.0 + PI / 6.0) + cxClient * 3 / 4.0;
+                 lpPoint[i].y =  cyClient / 4.0 * sin(i * PI / 3.0 + PI / 6.0) + cyClient * 3 / 4.0;
 			}
-			Polygon(hdc, lpPoint, sizeof(lpPoint));
+			  Polygon(hdc, lpPoint, sizeof(lpPoint));
 
 			EndPaint(hWnd, &ps);
 			return 0;
